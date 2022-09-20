@@ -52,10 +52,10 @@ public class GuitarController {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        Guitar product = new Guitar(guitarForm.getId(), guitarForm.getName(), guitarForm.getPrice(), fileName);
+        Guitar guitar = new Guitar(guitarForm.getId(), guitarForm.getName(), guitarForm.getPrice(), fileName);
         ModelAndView modelAndView = new ModelAndView("/guitar/create");
         modelAndView.addObject("guitar", new Guitar());
-        guitarService.insert(product);
+        guitarService.insert(guitar);
         return modelAndView;
     }
 
